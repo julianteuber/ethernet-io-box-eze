@@ -1,0 +1,628 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 7
+Title "Ethernet I/O Box"
+Date "2019-12-20"
+Rev "1.0"
+Comp "Julian Teuber"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D305
+U 1 1 5DD21944
+P 4000 1500
+F 0 "D305" V 4039 1382 50  0000 R CNN
+F 1 "RED" V 3948 1382 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4000 1500 50  0001 C CNN
+F 3 "~" H 4000 1500 50  0001 C CNN
+	1    4000 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q301
+U 1 1 5DD24954
+P 2650 1950
+F 0 "Q301" H 2841 1996 50  0000 L CNN
+F 1 "BC817" H 2841 1905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 1875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 2650 1950 50  0001 L CNN
+	1    2650 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R302
+U 1 1 5DD25409
+P 3200 1950
+F 0 "R302" V 2993 1950 50  0000 C CNN
+F 1 "390" V 3084 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3130 1950 50  0001 C CNN
+F 3 "~" H 3200 1950 50  0001 C CNN
+	1    3200 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J301
+U 1 1 5DD25AC9
+P 1600 1000
+F 0 "J301" H 1518 1317 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1518 1226 50  0000 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBVA_2,5_3-G-7,62_1x03_P7.62mm_Vertical" H 1600 1000 50  0001 C CNN
+F 3 "~" H 1600 1000 50  0001 C CNN
+	1    1600 1000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1650 2550 1700
+Wire Wire Line
+	2550 1700 3400 1700
+Wire Wire Line
+	4000 1700 4000 1650
+Connection ~ 2550 1700
+Wire Wire Line
+	2550 1700 2550 1750
+Wire Wire Line
+	4000 1700 3400 1700
+Wire Wire Line
+	3400 1700 3400 1400
+Wire Wire Line
+	3400 1100 3400 1000
+Wire Wire Line
+	3400 1000 4000 1000
+Wire Wire Line
+	2550 1000 2550 1050
+$Comp
+L power:GND #PWR0302
+U 1 1 5DD368C3
+P 2550 2200
+F 0 "#PWR0302" H 2550 1950 50  0001 C CNN
+F 1 "GND" H 2555 2027 50  0000 C CNN
+F 2 "" H 2550 2200 50  0001 C CNN
+F 3 "" H 2550 2200 50  0001 C CNN
+	1    2550 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2200 2550 2150
+Wire Wire Line
+	2850 1950 3050 1950
+$Comp
+L power:+5V #PWR0301
+U 1 1 5DD374E1
+P 2550 900
+F 0 "#PWR0301" H 2550 750 50  0001 C CNN
+F 1 "+5V" H 2565 1073 50  0000 C CNN
+F 2 "" H 2550 900 50  0001 C CNN
+F 3 "" H 2550 900 50  0001 C CNN
+	1    2550 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 900  2550 1000
+Connection ~ 2550 1000
+Wire Wire Line
+	2150 1650 2150 1750
+Wire Wire Line
+	2150 1750 1850 1750
+Wire Wire Line
+	1850 1750 1850 1100
+Wire Wire Line
+	1850 1100 1800 1100
+Wire Wire Line
+	2050 1050 2050 1000
+Wire Wire Line
+	2050 1000 1800 1000
+Wire Wire Line
+	1800 900  2250 900 
+Wire Wire Line
+	2250 900  2250 1050
+$Comp
+L Device:R_Small R301
+U 1 1 5DDFFB07
+P 4000 1200
+F 0 "R301" H 4059 1246 50  0000 L CNN
+F 1 "1k" H 4059 1155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 1200 50  0001 C CNN
+F 3 "~" H 4000 1200 50  0001 C CNN
+	1    4000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1300 4000 1350
+Wire Wire Line
+	4000 1000 4000 1100
+Connection ~ 3400 1000
+Wire Wire Line
+	3400 1000 2550 1000
+Connection ~ 3400 1700
+$Comp
+L Device:LED D306
+U 1 1 5DE67DF8
+P 4000 3250
+F 0 "D306" V 4039 3132 50  0000 R CNN
+F 1 "RED" V 3948 3132 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4000 3250 50  0001 C CNN
+F 3 "~" H 4000 3250 50  0001 C CNN
+	1    4000 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q302
+U 1 1 5DE67E04
+P 2650 3700
+F 0 "Q302" H 2841 3746 50  0000 L CNN
+F 1 "BC817" H 2841 3655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 3625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 2650 3700 50  0001 L CNN
+	1    2650 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R304
+U 1 1 5DE67E0A
+P 3200 3700
+F 0 "R304" V 2993 3700 50  0000 C CNN
+F 1 "390" V 3084 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3130 3700 50  0001 C CNN
+F 3 "~" H 3200 3700 50  0001 C CNN
+	1    3200 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J302
+U 1 1 5DE67E10
+P 1600 2750
+F 0 "J302" H 1518 3067 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1518 2976 50  0000 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBVA_2,5_3-G-7,62_1x03_P7.62mm_Vertical" H 1600 2750 50  0001 C CNN
+F 3 "~" H 1600 2750 50  0001 C CNN
+	1    1600 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3400 2550 3450
+Wire Wire Line
+	2550 3450 3400 3450
+Wire Wire Line
+	4000 3450 4000 3400
+Connection ~ 2550 3450
+Wire Wire Line
+	2550 3450 2550 3500
+Wire Wire Line
+	4000 3450 3400 3450
+Wire Wire Line
+	3400 3450 3400 3150
+Wire Wire Line
+	3400 2850 3400 2750
+Wire Wire Line
+	3400 2750 4000 2750
+Wire Wire Line
+	2550 2750 2550 2800
+$Comp
+L power:GND #PWR0304
+U 1 1 5DE67E20
+P 2550 3950
+F 0 "#PWR0304" H 2550 3700 50  0001 C CNN
+F 1 "GND" H 2555 3777 50  0000 C CNN
+F 2 "" H 2550 3950 50  0001 C CNN
+F 3 "" H 2550 3950 50  0001 C CNN
+	1    2550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3950 2550 3900
+Wire Wire Line
+	2850 3700 3050 3700
+$Comp
+L power:+5V #PWR0303
+U 1 1 5DE67E28
+P 2550 2650
+F 0 "#PWR0303" H 2550 2500 50  0001 C CNN
+F 1 "+5V" H 2565 2823 50  0000 C CNN
+F 2 "" H 2550 2650 50  0001 C CNN
+F 3 "" H 2550 2650 50  0001 C CNN
+	1    2550 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2650 2550 2750
+Connection ~ 2550 2750
+Wire Wire Line
+	2150 3400 2150 3500
+Wire Wire Line
+	2150 3500 1850 3500
+Wire Wire Line
+	1850 3500 1850 2850
+Wire Wire Line
+	1850 2850 1800 2850
+Wire Wire Line
+	2050 2800 2050 2750
+Wire Wire Line
+	2050 2750 1800 2750
+Wire Wire Line
+	1800 2650 2250 2650
+Wire Wire Line
+	2250 2650 2250 2800
+$Comp
+L Device:R_Small R303
+U 1 1 5DE67E38
+P 4000 2950
+F 0 "R303" H 4059 2996 50  0000 L CNN
+F 1 "1k" H 4059 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 2950 50  0001 C CNN
+F 3 "~" H 4000 2950 50  0001 C CNN
+	1    4000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3050 4000 3100
+Wire Wire Line
+	4000 2750 4000 2850
+Connection ~ 3400 2750
+Wire Wire Line
+	3400 2750 2550 2750
+Connection ~ 3400 3450
+$Comp
+L Device:LED D307
+U 1 1 5DE6DE68
+P 4000 5000
+F 0 "D307" V 4039 4882 50  0000 R CNN
+F 1 "RED" V 3948 4882 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4000 5000 50  0001 C CNN
+F 3 "~" H 4000 5000 50  0001 C CNN
+	1    4000 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q303
+U 1 1 5DE6DE74
+P 2650 5450
+F 0 "Q303" H 2841 5496 50  0000 L CNN
+F 1 "BC817" H 2841 5405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 5375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 2650 5450 50  0001 L CNN
+	1    2650 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R306
+U 1 1 5DE6DE7A
+P 3200 5450
+F 0 "R306" V 2993 5450 50  0000 C CNN
+F 1 "390" V 3084 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3130 5450 50  0001 C CNN
+F 3 "~" H 3200 5450 50  0001 C CNN
+	1    3200 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J303
+U 1 1 5DE6DE80
+P 1600 4500
+F 0 "J303" H 1518 4817 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1518 4726 50  0000 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBVA_2,5_3-G-7,62_1x03_P7.62mm_Vertical" H 1600 4500 50  0001 C CNN
+F 3 "~" H 1600 4500 50  0001 C CNN
+	1    1600 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 5150 2550 5200
+Wire Wire Line
+	2550 5200 3400 5200
+Wire Wire Line
+	4000 5200 4000 5150
+Connection ~ 2550 5200
+Wire Wire Line
+	2550 5200 2550 5250
+Wire Wire Line
+	4000 5200 3400 5200
+Wire Wire Line
+	3400 5200 3400 4900
+Wire Wire Line
+	3400 4600 3400 4500
+Wire Wire Line
+	3400 4500 4000 4500
+Wire Wire Line
+	2550 4500 2550 4550
+$Comp
+L power:GND #PWR0306
+U 1 1 5DE6DE90
+P 2550 5700
+F 0 "#PWR0306" H 2550 5450 50  0001 C CNN
+F 1 "GND" H 2555 5527 50  0000 C CNN
+F 2 "" H 2550 5700 50  0001 C CNN
+F 3 "" H 2550 5700 50  0001 C CNN
+	1    2550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 5700 2550 5650
+Wire Wire Line
+	2850 5450 3050 5450
+$Comp
+L power:+5V #PWR0305
+U 1 1 5DE6DE98
+P 2550 4400
+F 0 "#PWR0305" H 2550 4250 50  0001 C CNN
+F 1 "+5V" H 2565 4573 50  0000 C CNN
+F 2 "" H 2550 4400 50  0001 C CNN
+F 3 "" H 2550 4400 50  0001 C CNN
+	1    2550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4400 2550 4500
+Connection ~ 2550 4500
+Wire Wire Line
+	2150 5150 2150 5250
+Wire Wire Line
+	2150 5250 1850 5250
+Wire Wire Line
+	1850 5250 1850 4600
+Wire Wire Line
+	1850 4600 1800 4600
+Wire Wire Line
+	2050 4550 2050 4500
+Wire Wire Line
+	2050 4500 1800 4500
+Wire Wire Line
+	1800 4400 2250 4400
+Wire Wire Line
+	2250 4400 2250 4550
+$Comp
+L Device:R_Small R305
+U 1 1 5DE6DEA8
+P 4000 4700
+F 0 "R305" H 4059 4746 50  0000 L CNN
+F 1 "1k" H 4059 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 4700 50  0001 C CNN
+F 3 "~" H 4000 4700 50  0001 C CNN
+	1    4000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4800 4000 4850
+Wire Wire Line
+	4000 4500 4000 4600
+Connection ~ 3400 4500
+Wire Wire Line
+	3400 4500 2550 4500
+Connection ~ 3400 5200
+$Comp
+L Device:LED D308
+U 1 1 5DE77ABC
+P 4000 6750
+F 0 "D308" V 4039 6632 50  0000 R CNN
+F 1 "RED" V 3948 6632 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4000 6750 50  0001 C CNN
+F 3 "~" H 4000 6750 50  0001 C CNN
+	1    4000 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q304
+U 1 1 5DE77AC8
+P 2650 7200
+F 0 "Q304" H 2841 7246 50  0000 L CNN
+F 1 "BC817" H 2841 7155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 7125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 2650 7200 50  0001 L CNN
+	1    2650 7200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R308
+U 1 1 5DE77ACE
+P 3200 7200
+F 0 "R308" V 2993 7200 50  0000 C CNN
+F 1 "390" V 3084 7200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3130 7200 50  0001 C CNN
+F 3 "~" H 3200 7200 50  0001 C CNN
+	1    3200 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J304
+U 1 1 5DE77AD4
+P 1600 6250
+F 0 "J304" H 1518 6567 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1518 6476 50  0000 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBVA_2,5_3-G-7,62_1x03_P7.62mm_Vertical" H 1600 6250 50  0001 C CNN
+F 3 "~" H 1600 6250 50  0001 C CNN
+	1    1600 6250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 6900 2550 6950
+Wire Wire Line
+	2550 6950 3400 6950
+Wire Wire Line
+	4000 6950 4000 6900
+Connection ~ 2550 6950
+Wire Wire Line
+	2550 6950 2550 7000
+Wire Wire Line
+	4000 6950 3400 6950
+Wire Wire Line
+	3400 6950 3400 6650
+Wire Wire Line
+	3400 6350 3400 6250
+Wire Wire Line
+	3400 6250 4000 6250
+Wire Wire Line
+	2550 6250 2550 6300
+$Comp
+L power:GND #PWR0308
+U 1 1 5DE77AE4
+P 2550 7450
+F 0 "#PWR0308" H 2550 7200 50  0001 C CNN
+F 1 "GND" H 2555 7277 50  0000 C CNN
+F 2 "" H 2550 7450 50  0001 C CNN
+F 3 "" H 2550 7450 50  0001 C CNN
+	1    2550 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 7450 2550 7400
+Wire Wire Line
+	2850 7200 3050 7200
+$Comp
+L power:+5V #PWR0307
+U 1 1 5DE77AEC
+P 2550 6150
+F 0 "#PWR0307" H 2550 6000 50  0001 C CNN
+F 1 "+5V" H 2565 6323 50  0000 C CNN
+F 2 "" H 2550 6150 50  0001 C CNN
+F 3 "" H 2550 6150 50  0001 C CNN
+	1    2550 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 6150 2550 6250
+Connection ~ 2550 6250
+Wire Wire Line
+	2150 6900 2150 7000
+Wire Wire Line
+	2150 7000 1850 7000
+Wire Wire Line
+	1850 7000 1850 6350
+Wire Wire Line
+	1850 6350 1800 6350
+Wire Wire Line
+	2050 6300 2050 6250
+Wire Wire Line
+	2050 6250 1800 6250
+Wire Wire Line
+	1800 6150 2250 6150
+Wire Wire Line
+	2250 6150 2250 6300
+$Comp
+L Device:R_Small R307
+U 1 1 5DE77AFC
+P 4000 6450
+F 0 "R307" H 4059 6496 50  0000 L CNN
+F 1 "1k" H 4059 6405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4000 6450 50  0001 C CNN
+F 3 "~" H 4000 6450 50  0001 C CNN
+	1    4000 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6550 4000 6600
+Wire Wire Line
+	4000 6250 4000 6350
+Connection ~ 3400 6250
+Wire Wire Line
+	3400 6250 2550 6250
+Connection ~ 3400 6950
+Wire Wire Line
+	3350 1950 3400 1950
+Wire Wire Line
+	3400 3700 3350 3700
+Wire Wire Line
+	3400 5450 3350 5450
+Wire Wire Line
+	3400 7200 3350 7200
+$Comp
+L Diode:1N4148WS D3001
+U 1 1 5DEB9C9D
+P 3400 1250
+F 0 "D3001" V 3354 1330 50  0000 L CNN
+F 1 "1N4148WS" V 3445 1330 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3400 1075 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85751/1n4148ws.pdf" H 3400 1250 50  0001 C CNN
+	1    3400 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148WS D3002
+U 1 1 5DEBA405
+P 3400 3000
+F 0 "D3002" V 3354 3080 50  0000 L CNN
+F 1 "1N4148WS" V 3445 3080 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3400 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85751/1n4148ws.pdf" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148WS D3003
+U 1 1 5DEBA80F
+P 3400 4750
+F 0 "D3003" V 3354 4830 50  0000 L CNN
+F 1 "1N4148WS" V 3445 4830 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3400 4575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85751/1n4148ws.pdf" H 3400 4750 50  0001 C CNN
+	1    3400 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148WS D3004
+U 1 1 5DEBAD9A
+P 3400 6500
+F 0 "D3004" V 3354 6580 50  0000 L CNN
+F 1 "1N4148WS" V 3445 6580 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3400 6325 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85751/1n4148ws.pdf" H 3400 6500 50  0001 C CNN
+	1    3400 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay:FINDER-34.51 K3001
+U 1 1 5DECDFDB
+P 2350 1350
+F 0 "K3001" H 1920 1396 50  0000 R CNN
+F 1 "FINDER-34.51" H 1920 1305 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_34.51_Vertical" H 3490 1310 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/34/EN/S34USAEN.pdf" H 2350 1350 50  0001 C CNN
+	1    2350 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-34.51 K3002
+U 1 1 5DECF573
+P 2350 3100
+F 0 "K3002" H 1920 3146 50  0000 R CNN
+F 1 "FINDER-34.51" H 1920 3055 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_34.51_Vertical" H 3490 3060 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/34/EN/S34USAEN.pdf" H 2350 3100 50  0001 C CNN
+	1    2350 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-34.51 K3003
+U 1 1 5DED0CB6
+P 2350 4850
+F 0 "K3003" H 1920 4896 50  0000 R CNN
+F 1 "FINDER-34.51" H 1920 4805 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_34.51_Vertical" H 3490 4810 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/34/EN/S34USAEN.pdf" H 2350 4850 50  0001 C CNN
+	1    2350 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-34.51 K3004
+U 1 1 5DED11AE
+P 2350 6600
+F 0 "K3004" H 1920 6646 50  0000 R CNN
+F 1 "FINDER-34.51" H 1920 6555 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_34.51_Vertical" H 3490 6560 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/34/EN/S34USAEN.pdf" H 2350 6600 50  0001 C CNN
+	1    2350 6600
+	-1   0    0    -1  
+$EndComp
+Text HLabel 3400 5450 2    50   Input ~ 0
+OUT_3
+Text HLabel 3400 3700 2    50   Input ~ 0
+OUT_2
+Text HLabel 3400 1950 2    50   Input ~ 0
+OUT_1
+Text HLabel 3400 7200 2    50   Input ~ 0
+OUT_4
+$EndSCHEMATC
